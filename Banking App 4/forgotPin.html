@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		pin = []
+		accounts = JSON.parse(localStorage.allCustomers)
+		pin = accounts
+		function forgot() {
+			me = prompt('Enter your phone number')
+			for (var i = 0; i < pin.length; i++) {
+				if (me == pin[i].phoneNumber) {
+					alert('Your pin is ' + pin[i].uPin)
+					window.location = 'signIn.html';
+					return
+				} else {
+					alert("Phone number is not registered")
+					window.location = 'signIn.html';
+					return
+				}
+			}
+
+		}
+		forgot()
+	</script>
+</body>
+</html>

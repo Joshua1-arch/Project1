@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="" content="">
+    <title></title>
+  </head>
+  <body>
+    <style type="text/css" media="all">
+body {
+background: rgb(213, 213, 213);
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+input {
+display: block;
+width: 80%;
+margin-bottom: 20px;
+padding: 10px;
+border: none;
+outline: none;
+font-family: sans-serif;
+background: transparent;
+font-size: 16px;
+border-radius: 25px;
+text-shadow: 1px 1px 0 #fff;
+box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+}
+button{
+border-radius: 25px;
+background: rgb(82, 182, 221);
+color: white;
+font-size: 20px;
+cursor: pointer;
+box-shadow: -5px -5px 20px rgb(224, 217, 217), 5px 5px 20px #babecc;
+outline: none;
+}
+    </style>
+   <em>
+        <h1>
+      Input Your number below
+      </h1>
+   </em>
+    <input type="number" name="" id="Step" value="" placeholder="Phone Number Required"/>
+    <button type="submit" onclick="reveal()"> 
+          Check!!
+    </button>
+    <center>
+     <div id="passwordForgotten">
+      
+    </div>
+    </center>
+    
+    
+    
+    
+    <script type="text/javascript" charset="utf-8">
+    pin = []
+		accounts = JSON.parse(localStorage.allCustomers)
+		pin = accounts
+		function forgot() {
+			me = prompt('Enter your phone number')
+			for (var i = 0; i < pin.length; i++) {
+				if (me == pin[i].accNo) {
+					alert('Your pin is ' + pin[i].Password)
+					window.location = 'Log.html';
+					return
+				} else {
+					alert("Phone number is not registered")
+					window.location = 'Log.html';
+					return
+				}
+			}
+
+		}
+		forgot()
+  //     existants = []
+  //     function reveal (){
+
+
+  //       Proexisting  = JSON.parse(localStorage.allCustomers);
+	// 	  	existants = Proexisting;
+  //       for (var i = 0; i < existants.length; i++) {
+  //           if (Step.value != existants[i].accNo || Step.value !=existants[i].phoneNumber) {
+  //               // alert("Login Successful")
+  //               alert('You do not have an account with us')
+  //       return
+  //           }
+        
+  //    else {
+  //     passwordForgotten.innerHTML = existants[i].uPin
+  //               return;
+        
+  //   }
+  // }
+  // }
+
+      
+    </script>
+  </body>
+</html>
